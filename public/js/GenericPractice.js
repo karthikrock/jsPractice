@@ -1,6 +1,27 @@
-var a = ["1", "2", "3" ];
+(function() { 
+    'use strict';
+function Parent(name, religion) {
+    this.x = 'CSK Parent';
+    this.familyName = name;
+    this.familyBelief = religion;
+}
 
 
-a.splice(2, 1, "4");
+Parent.prototype.q = 'Parent\'s Q';
 
-syso(a);
+
+var Child = function (familyName, religion) {
+    //Parent.call(this, familyName, religion);
+    this.y = 'CSK Child';
+
+};
+
+
+
+Child.prototype = new Parent();
+
+
+var child = new Child('Chengayans', 'Hinduism');
+var child2 = new Child('Johnsons', 'Christianity');
+syso(child.x);
+}());

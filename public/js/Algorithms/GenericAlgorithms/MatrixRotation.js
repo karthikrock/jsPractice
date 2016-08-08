@@ -20,5 +20,9 @@ function rotateMatrix(matrix){
         
     }
 
+    return matrix;
 
 }
+
+
+syso(rotateMatrix(matrix));
